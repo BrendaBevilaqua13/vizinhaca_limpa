@@ -106,6 +106,7 @@ uvicorn src.main:app --reload
 
 -   Página inicial: `/public/index.html`
 -   Login: `/public/login.html`
+-   Cadastro: `/public/cadastro.html`
 
 ### API Swagger:
 
@@ -122,7 +123,7 @@ uvicorn src.main:app --reload
 
 ### Público-Alvo
 
-Moradores, fiscais ambientais e gestores municipais.
+Moradores do bairro do Alto da Mangueira - Maracanaú.
 
 ### Processo de Validação
 
@@ -146,5 +147,4 @@ Moradores, fiscais ambientais e gestores municipais.
 
 ## Autor
 
-Desenvolvido por Brenda para o projeto acadêmico de Sistema de Denúncias
-Urbanas.
+Desenvolvido por Brenda na parte do backend e Ingrid na parte do frontend
