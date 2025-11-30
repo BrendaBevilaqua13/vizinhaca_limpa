@@ -102,6 +102,10 @@ uvicorn src.main:app --reload
 
 ## 6. Acesso ao Sistema
 
+### Link da hospedagem:
+
+url: https://vizinhaca-limpa.onrender.com/public/login.html
+
 ### Interface HTML:
 
 -   Página inicial: `/public/index.html`
@@ -162,6 +166,32 @@ Hasael
 
 ------------------------------------------------------------------------
 
-## Autor
+## 8. Equipe de Desenvolvimento
 
-Desenvolvido por Brenda Beviláqua na parte do backend e Ingrid de Oliveira na parte do frontend
+### 👩‍💻 Membros da Equipe
+- Brenda Carla dos Santos Beviláqua
+- Ingrid de Oliveira
+
+---
+
+### 🛠️ Papéis e Contribuições Principais
+
+#### **Brenda Beviláqua – Backend**
+Responsável por:
+- Desenvolvimento da API e regras de negócio.
+- Estruturação do servidor e rotas do sistema.
+- Integração com o banco de dados.
+- Implementação das funcionalidades principais: cadastro de denúncias, autenticação, listagem e armazenamento.
+- Organização do repositório backend e documentação técnica relacionada.
+
+#### **Ingrid de Oliveira – Frontend**
+Responsável por:
+- Desenvolvimento da interface visual do usuário.
+- Criação das telas e componentes interativos do sistema.
+- Integração do frontend com a API desenvolvida no backend.
+- Garantia de usabilidade, navegação simples e experiência intuitiva.
+- Organização do repositório frontend e documentação das telas.
+
+---
+
+Ambas colaboraram na definição dos requisitos, validação do sistema e construção do conceito geral do projeto “Vizinhança Limpa”.
