@@ -123,17 +123,34 @@ uvicorn src.main:app --reload
 
 ### Público-Alvo
 
-Moradores do bairro do Alto da Mangueira - Maracanaú.
+A validação do sistema foi realizada com a Comunidade Unida, um grupo de moradores do bairro Alto da Mangueira, em Maracanaú – CE, vinculado à Igreja Nossa Senhora do Carmo.
+Esse grupo participa de ações sociais, religiosas e ambientais no bairro, sendo ideal para validar um sistema de denúncias de lixo.
 
-### Processo de Validação
+O grupo completo é formado por:
 
--   Testes com usuários reais\
--   Demonstração em ambiente controlado\
--   Feedback sobre usabilidade e clareza das telas
+Neido Gomes
+
+Claudenia dos Santos
+
+Sherliane Oliveira
+
+Halama Paiva Oliveira
+
+Mário da Silva
+
+Hasael Barbosa
+
+A validação ocorreu no dia 27/11, quando parte do grupo conseguiu participar da videochamada dos testes práticos da aplicação.
+Os participantes ativos da validação foram:
+
+Neido
+
+Claudenia
+
+Hasael
 
 ### Principais Feedbacks
 
--   Necessidade de melhorar filtros de busca\
 -   Interface clara e fácil de usar\
 -   Login funcionando corretamente
 
@@ -141,10 +158,10 @@ Moradores do bairro do Alto da Mangueira - Maracanaú.
 
 -   Melhor organização da listagem de denúncias\
 -   Ajustes visuais no layout\
--   Correção de erros de redirecionamento
+-   Correção no controle de quem pode marcar como concluida a denuncia
 
 ------------------------------------------------------------------------
 
 ## Autor
 
-Desenvolvido por Brenda na parte do backend e Ingrid na parte do frontend
+Desenvolvido por Brenda Beviláqua na parte do backend e Ingrid de Oliveira na parte do frontend
