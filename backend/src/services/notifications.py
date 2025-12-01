@@ -1,4 +1,4 @@
-# módulo simples de exemplo — em producao use provider (SendGrid, Mailgun etc.)
+
 import smtplib
 from email.mime.text import MIMEText
 

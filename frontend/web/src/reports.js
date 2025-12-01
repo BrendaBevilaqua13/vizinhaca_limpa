@@ -18,8 +18,7 @@ function formatDate(isoString) {
 
     let dateString = isoString;
 
-    // 🚨 CORREÇÃO: Adiciona 'Z' se o indicador UTC estiver faltando
-    // Isso força o JS a interpretar a string como UTC antes de convertê-la para o fuso local.
+    
     if (typeof isoString === 'string' && !isoString.endsWith('Z')) {
         dateString += 'Z'; 
     }
@@ -68,7 +67,7 @@ function setupPagination(reportsCount) {
 // Funções de Navegação
 function goToNextPage() {
     currentSkip += REPORTS_PER_PAGE;
-    loadReports(); // Chama loadReports sem parâmetros, que usará as variáveis globais
+    loadReports();
 }
 
 function goToPrevPage() {
@@ -124,8 +123,7 @@ if (reportsListContainer) {
 }
 
 async function loadReports(skip = currentSkip, limit = REPORTS_PER_PAGE) {
-    // Nota: O teste 'typeof skip === "object"' não é mais necessário 
-    // se você garantir que loadReports é chamada sem parâmetros ou com números.
+
 
     reportsListContainer.innerHTML = '<p class="text-center text-gray-500">Carregando denúncias...</p>';
     
@@ -134,7 +132,7 @@ async function loadReports(skip = currentSkip, limit = REPORTS_PER_PAGE) {
 
     if (result.success) {
         const reports = result.data;
-        reportsListContainer.innerHTML = ''; // Limpa antes de adicionar
+        reportsListContainer.innerHTML = ''; 
         
         // 🚨 CHAMA setupPagination antes de retornar para atualizar os botões
         setupPagination(reports.length); 
@@ -245,7 +243,7 @@ if (createReportForm) {
             description: form.description.value,
             category: form.category.value,
             address_text: form.address_text.value,
-            // ⚠️ MOCK: Valores fixos para Lat/Lon. No app real, use Geolocation API.
+            // MOCK: Valores fixos para Lat/Lon.
             latitude: form.latitude.value, 
             longitude: form.longitude.value,
         };
@@ -276,7 +274,6 @@ if (logoutButton) {
     });
 }
 
-// 🚨 NOVA FUNÇÃO DE EXCLUSÃO
 async function handleDeleteReport(reportId) {
     if (!confirm(`Tem certeza que deseja EXCLUIR permanentemente a denúncia ${reportId}? Esta ação é irreversível.`)) {
         return;

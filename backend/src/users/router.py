@@ -32,7 +32,7 @@ def list_users(db: Session = Depends(get_db)):
 @router.post("/login")
 def login_form(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
     # 1. Recupera o usuário pelo email
-    user = crud.get_user_by_email(db, form_data.username) # Note: OAuth2PasswordRequestForm usa 'username'
+    user = crud.get_user_by_email(db, form_data.username) # OAuth2PasswordRequestForm usa 'username'
     if not user:
         raise HTTPException(status_code=400, detail="Email não encontrado")
 

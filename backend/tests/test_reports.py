@@ -6,7 +6,7 @@ from fastapi import status
 sys.path.append(os.path.abspath(os.path.dirname(__file__) + "/.."))
 
 from fastapi.testclient import TestClient
-from src.main import app  # agora o import funciona
+from src.main import app  
 
 client = TestClient(app)
 

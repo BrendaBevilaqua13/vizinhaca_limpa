@@ -1,5 +1,4 @@
-// Função para formatar a resposta de erro da API para ser legível.
-// Trata o erro 422 (validação) do FastAPI e outros erros com campo 'detail'.
+
 export function formatErrorResponse(responseData) {
     if (responseData && responseData.detail) {
         // Trata erros de validação (422) que vêm como uma lista

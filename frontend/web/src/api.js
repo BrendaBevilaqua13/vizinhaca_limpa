@@ -23,7 +23,7 @@ async function fetchData(endpoint, method = 'GET', data = null, needsAuth = fals
     const config = {
         method: method,
         headers: headers,
-        // FormData (para upload de imagem) não deve ser stringificado
+        
         body: data ? (data instanceof FormData ? data : JSON.stringify(data)) : null
     };
 
@@ -76,7 +76,7 @@ async function apiSignup(name, email, password, role = 'citizen') {
 
 // Listar Denúncias
 async function apiListReports(skip = 0, limit = 10) {
-    // 🚨 Deve ser assim, usando query parameters:
+    
     const endpoint = `/reports/?skip=${skip}&limit=${limit}`; 
     
     return await fetchData(endpoint, 'GET', null, true);
@@ -85,13 +85,12 @@ async function apiListReports(skip = 0, limit = 10) {
 async function apiUpdateReportStatus(reportId, newStatus) {
     const endpoint = `/reports/${reportId}/status`;
     
-    // 🚨 PASSO CRUCIAL: Cria o objeto de dados JSON que o backend espera
+    
     const updateData = { 
         status: newStatus // Ex: { status: "concluida" }
     };
     
-    // Chama o fetchData com o objeto 'updateData'
-    // Defina needsAuth para true, já que é uma ação administrativa/logada.
+    
     return await fetchData(endpoint, 'PATCH', updateData, true); 
 }
 window.handleUpdateStatus = apiUpdateReportStatus;
@@ -99,8 +98,7 @@ window.handleUpdateStatus = apiUpdateReportStatus;
 async function apiDeleteReport(reportId) {
     const endpoint = `/reports/${reportId}`;
     
-    // 🚨 NOTA: Não é necessário passar 'data' (corpo JSON) para a exclusão
-    // Usa o método DELETE e exige autenticação (needsAuth: true)
+    
     const result = await fetchData(endpoint, 'DELETE', null, true); 
     
     return result;
